@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Zadanie rekrutacyjne Grupa.IT{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+        {#{{ encore_entry_link_tags('app') }}#}
+    {% endblock %}
+
+    {% block javascripts %}
+        {#{{ encore_entry_script_tags('app') }}#}
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    <form method="post">
+        <label for="firstString">Wprowadź tekst:</label><br>
+        <input type="text" id="firstString" name="firstString" value="Przykładowy tekst"><br>
+        <label for="secondString">Wprowadź wyraz który chcesz sprawdzić:</label><br>
+        <input type="text" id="secondString" name="secondString" value="tekst"><br><br>
+        <input type="submit" name="strpos" value="Sprawdź">
+    </form>
+    <br><h2>Żarcik na dziś: </h2>
+    {{ chucknorrisJoke }}
+{% endblock %}
+</body>
+</html>
